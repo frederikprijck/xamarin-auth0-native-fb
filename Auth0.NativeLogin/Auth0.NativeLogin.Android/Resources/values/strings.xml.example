@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_id">{FB_APP_ID}</string>
+	<string name="app_name">Auth0 Xamarin</string>
+	<string name="fb_login_protocol_scheme">fb{FB_APP_ID}</string>
+</resources>
