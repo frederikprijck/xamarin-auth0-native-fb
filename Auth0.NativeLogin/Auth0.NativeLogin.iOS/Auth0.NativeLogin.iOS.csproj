@@ -62,7 +62,12 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FacebookLoginButtonRenderer.cs" />
+    <Compile Include="FacebookLoginService.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -123,11 +128,18 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Facebook.iOS">
+      <Version>9.0.1.5</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\Auth0.NativeLogin.Facebook\Auth0.NativeLogin.Facebook.csproj">
+      <Project>{7DF992DC-AF34-4368-BCEB-390E12F67305}</Project>
+      <Name>Auth0.NativeLogin.Facebook</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auth0.NativeLogin\Auth0.NativeLogin.csproj">
       <Project>{2B857C53-86B4-44E1-8D70-BA2159ED09C7}</Project>
       <Name>Auth0.NativeLogin</Name>
