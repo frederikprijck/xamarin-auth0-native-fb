@@ -27,7 +27,7 @@ Open `app.xaml.cs` (inside `Auth0.NativeLogin/Auth0.NativeLogin`) and replace th
 
 ### Android specific configuration
 
-In order to run this project on an Android emulator (or device), you need to rename `strings.xml/example` (inside `Auth0.NativeLogin/Auth0.NativeLogin.Android/Resources/values`) to `strings.xml` and fill in the Facebook App Id.
+In order to run this project on an Android emulator (or device), you need to update `strings.xml` (inside `Auth0.NativeLogin/Auth0.NativeLogin.Android/Resources/values`) by filling in the Facebook App Id.
 
 > It appears to be the case that you need to target `Android <=30` as the Xamarin Facebook SDK has a known issue that's fixed but not released: https://github.com/xamarin/FacebookComponents/issues/236
 
