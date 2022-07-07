@@ -33,4 +33,4 @@ In order to run this project on an Android emulator (or device), you need to upd
 
 ### iOS specific configuration
 
-[TODO]
+In order to run this project on an iOS emulator (or device), you need to update `Info.plist` (inside `Auth0.NativeLogin/Auth0.NativeLogin.iOS`) by filling in the Facebook App Id.
